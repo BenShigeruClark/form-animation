@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(90deg, #6190E8, #a7bfe8)
+}
+
+form {
+    min-height: 50vh;
+    width: 50vw;
+    background: white;
+    border-radius: 2rem;
+    color: #777474;
+    padding: 3rem 5rem;
+    display: flex;
+}
+
+.title {
+    color: #6391e8;
+}
+
+.contact-right, .contact-left {
+    flex: 1;
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
