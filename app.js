@@ -114,3 +114,18 @@ function validateEmail(email) {
   gsap.set("#eye", {tansformOrigin: "center"});
   gsap.fromTo("#eye", {scaleY: 1}, {scaleY: 0.3, repeat: -1, yoyo: true, repeatDelay: 1, ease: "power2.easeOut"});
   gsap.fromTo("#eyebrow", {Y: 0}, {y: -1, repeat: -1, yoyo: true, repeatDelay: 0.5, ease: "power2.easeOut"});
+
+  // Submit button
+  const button = document.querySelector("button");
+  const tl3 = gsap.timeline({defaults: {duration: 0.75, ease: "power2.easeOut"}});
+
+  // text fades out
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    tl3.to(".contact-right, .contact-left", {y: 30, opacity: 0, pointerEvents: "none"});
+    tl3.to("form", {scale: 0.8}, "<");
+    tl3.fromTo(".submitted", {opacity: 0, y: 30}, {opacity: 1, y: 0});
+    // Hand waves
+    gsap.set("#hand", {transformOrigin: "left"});
+    gsap.fromTo("#hand", {rotaion: 0, y: 0}, {rotation: -10, y: 2, ease: "elastic(3, 0.3)", duration: 3, delay: 1});
+  });
