@@ -109,3 +109,8 @@ function validateEmail(email) {
         tl2.to(".checkbox-label", {color: "#777474"}, "<");
     }
   });
+
+  // Animating character
+  gsap.set("#eye", {tansformOrigin: "center"});
+  gsap.fromTo("#eye", {scaleY: 1}, {scaleY: 0.3, repeat: -1, yoyo: true, repeatDelay: 1, ease: "power2.easeOut"});
+  gsap.fromTo("#eyebrow", {Y: 0}, {y: -1, repeat: -1, yoyo: true, repeatDelay: 0.5, ease: "power2.easeOut"});
