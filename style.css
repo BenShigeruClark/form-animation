@@ -15,7 +15,7 @@ body {
 
 form {
     min-height: 50vh;
-    width: 50vw;
+    width: 60vw;
     background: white;
     border-radius: 2rem;
     color: #777474;
@@ -157,9 +157,19 @@ button {
     opacity: 0;
 }
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 768px) {
     form {
         width: 90vw;
         min-height: 80vh;
+        flex-direction: column;
+        padding: 8rem 3rem;
+    }
+
+    .line-svg {
+        width: 100%;
+    }
+
+    #character {
+        transform: scale(0.4) translate(0%, 30%);
     }
 }
